@@ -56,5 +56,9 @@ for (let i = 0; i < teamMembers.length; i++){ //creo ciclo for per attraversare 
                 "Image:", memberImage);
     
     //stampo in pagina le informazioni con il tag img
-    container.innerHTML += `<div>Name: ${memberName} <br> Role: ${memberRole} <br> <img src="img/${memberImage}.jpg"></div>`;
+    container.innerHTML += `<div class="card">
+                                <img src="img/${memberImage}.jpg" alt="${memberName}">
+                                <h3>${memberName}</h3>
+                                <span>${memberRole}</span>
+                            </div>`;
 };
