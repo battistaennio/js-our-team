@@ -64,8 +64,8 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     let member = teamMembers[i];
 
-    for(let key in member) {
-        console.log(key, ":", member[key]);
-        container.innerHTML += `<div>${key} : ${member[key]}</div>`;
+    for(let proprieta in member) {
+        console.log(proprieta, ":", member[proprieta]);
+        container.innerHTML += `<div>${proprieta} : ${member[proprieta]}</div>`;
     }
 };
