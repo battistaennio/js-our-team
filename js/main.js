@@ -41,20 +41,31 @@ const teamMembers = [
 
 
 //stampo in console i dati per ogni membro
-for (let i = 0; i < teamMembers.length; i++){ //creo ciclo for per attraversare tutti i mebmri e stampare i dati
-    //creo variabile per attraversare ogni singolo dato
+// for (let i = 0; i < teamMembers.length; i++){ //creo ciclo for per attraversare tutti i mebmri e stampare i dati
+//     //creo variabile per attraversare ogni singolo dato
+//     let member = teamMembers[i];
+
+//     //associo il tipo di dato ad una variabile
+//     let memberName = member.name;
+//     let memberRole = member.role;
+//     let memberImage = member.image;
+    
+//     //stampo in console il tipo di dato con l'informazione
+//     console.log("Name:", memberName,
+//                 "Role:", memberRole, 
+//                 "Image:", memberImage);
+    
+//     //stampo in pagina le informazioni
+//     container.innerHTML += `<div>Name: ${memberName}, Role: ${memberRole}, Image: ${memberImage}</div>`;
+// };
+
+//OPPURE
+for (let i = 0; i < teamMembers.length; i++) {
+
     let member = teamMembers[i];
 
-    //associo il tipo di dato ad una variabile
-    let memberName = member.name;
-    let memberRole = member.role;
-    let memberImage = member.image;
-    
-    //stampo in console il tipo di dato con l'informazione
-    console.log("Name:", memberName,
-                "Role:", memberRole, 
-                "Image:", memberImage);
-    
-    //stampo in pagina le informazioni
-    container.innerHTML += `<div>Name: ${memberName}, Role: ${memberRole}, Image: ${memberImage}</div>`;
+    for(let key in member) {
+        console.log(key, ":", member[key]);
+        container.innerHTML += `<div>${key} : ${member[key]}</div>`;
+    }
 };
