@@ -36,3 +36,15 @@ const teamMembers = [
         "image": "barbara-ramos-graphic-designer",
     },
 ];
+
+//stampo in console i dati per ogni membro
+for (let i = 0; i < teamMembers.length; i++){ //creo ciclo for per attraversare tutti i mebmri e stampare i dati
+    let member = teamMembers[i];
+
+    let memberName = member.name;
+    let memberRole = member.role;
+    let memberImage = member.image;
+    console.log("Name:", memberName,
+                "Role:", memberRole, 
+                "Image:", memberImage);
+};
